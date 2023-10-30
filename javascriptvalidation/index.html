@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    
+</head>
+<body>
+    <h1>Registration form</h1>
+    <form name="myform" method="post" onsubmit="return validation()">
+        Name:<input type="text" name="name"><br><br>
+        Password:<input type="password" name="pass"><br><br>
+        Confirm Password:<input type="password" name="cpass"><br><br>
+        Phone Number:<input type="text" name="num"><span id="number"></span><br><br>
+        <input type="submit" value="submit">
+    </form>
+    <script type="text/javascript">
+        function validation(){
+            var name=document.myform.name.value;
+            var pass=document.myform.pass.value;
+            var cpass=document.myform.cpass.value;
+            var num=document.myform.num.value;
+            if(name==null || name==""){
+            alert("please enter name");
+            return false;
+            }else if(isNaN(num)){
+                document.getElementById("number").innerText="entered number is no correct";
+                return false;
+            }
+            else if(pass.length<6){
+                alert("password must be atleast of 6 character long");
+                return false;
+            }else if(pass==cpass){
+                return true;
+            }else{
+                alert("password should be matched")
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
