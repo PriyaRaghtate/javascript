@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    
+</head>
+<body>
+    <script type="text/javascript">
+        class Emp{
+            constructor(id,name){
+                this.id=id;
+                this.name=name;
+            }
+            detail(){
+                document.writeln(this.id+" "+this.name +".<br>");
+            }
+        }
+        var obj1=new Emp(1,"priya");
+        obj1.detail();
+        var obj2=new Emp(2,"Anushka");
+        obj2.detail();
+
+    </script>
+</body>
+</html>
